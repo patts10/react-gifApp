@@ -9,18 +9,18 @@ export const GifGrid = ({ category }) => {
   
 
   return (
-    <>
-      <h3> {category} </h3>
+    <div className="bg-slate-100 p-5">
+      <h3 className="text-lg font-bold text-gray-900 sm:text-3xl sm:truncate mt-3 mb-5 mt-5"> { category } </h3>
 
       { loading && <p className="animate__animated animate__flash">Loading...</p>}
 
       <div>
-        <ol className="card-grid">
+        <ol className="flex flex-wrap justify-around">
           {images.map((img) => (
             <GifGridItem key={img.id} {...img} />
           ))}
         </ol>
       </div>
-    </>
+    </div>
   );
 };

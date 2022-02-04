@@ -21,9 +21,11 @@ export const AddCategory = ({ setCategories }) => {
   return (
   <form onSubmit={ handleSubmit } >
     <input 
+      className='my-5'
       type='text'
       value={ inputvalue }
       onChange={ handleInputChange }
+      placeholder={'Search...'}
     />
   </form>
   );
