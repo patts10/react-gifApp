@@ -3,9 +3,9 @@ import { AddCategory } from './components/AddCategory';
 import { Footer } from './components/Footer';
 import { GifGrid } from './components/GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ( {defaultCategories = [] } ) => {
 
-  const [categories, setCategories] = useState(['Squartle']);
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
     <>
